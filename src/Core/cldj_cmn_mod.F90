@@ -237,8 +237,8 @@
 
       integer NSJSUB(SX_)
 
-      ! QH2O: H20 cross-sections
-      real*8  QH20(WX_)
+      ! QH2O: H2O cross-sections
+      real*8  QH2O(WX_)
 
       ! QO2: O2 cross-sections
       real*8  QO2(WX_,3)
