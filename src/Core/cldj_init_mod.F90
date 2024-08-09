@@ -403,6 +403,11 @@
          enddo
       endif
 
+!---Read H2O X-sects  *** v8.0
+      read (NUN,'(a6,1x,a16,1x,a120)',err=4) TIT_J1S,TIT_J1L,TIT_J1N
+      read (NUN,'(5x,6e10.3/5x,6e10.3/5x,6e10.3)',err=4)    &
+          (QH2O(IW),IW=1,NWWW)
+        write(6,'(1x,a6,1x,a16,a8,a120)') TIT_J1S,TIT_J1L,' notes:',TIT_J1N   !print
 !---Read O2 X-sects, O3 X-sects, O3=>O(1D) quant yields (each at 3 temps)
 !---NB the O3 and q-O3-O1D are at different temperatures and cannot be combined
       read (NUN,'(a6,1x,a16,1x,a120)',err=4) TIT_J1S,TIT_J1L,TIT_J1N

@@ -534,6 +534,10 @@
             endif
          enddo
 
+!---Add H2O UV absorption (Fast-J bins only 1:18)
+         do K = 1,W_
+            OD(K,L)  = OD(K,L)  + QH2O(K)*HHJ(L)
+         enddo
 !---Add O2 & O3 absorbers to get final optical properties (Fast-J bins
 ! only 1:18)
          do K = 1,W_
