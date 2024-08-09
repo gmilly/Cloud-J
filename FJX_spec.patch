@@ -1,0 +1,25 @@
+1,2c1,2
+< FJX_spec.dat for Solar/Cloud-J: v76d new bin edges 17&18 (345-485-778 nm) plus 19-27 (778- ) for RRTMG
+< NEW FMT: Jshort(a6)|Jlong(a16)
+---
+> FJX_spec.dat: Solar/Cloud-J v8.0 + uv-H2O, bins 17&18 (345-485-778 nm) plus 19-27 (778- )
+> NEW FMT: Jshort(a6)|Jlong(a16) titles
+4c4
+< w-eff !wavelength (nm) ! wtd by SPhot for 1:18, by SWatt for 19:21
+---
+> w-eff !wavelength (nm) ! wtd by SPhot for 1:18, by SWatt for 19:27
+40c40
+< SJbins|SJ bin fractions| sub-bin breakdown of SJ bins 18-27
+---
+> SJbins|SJ bin fractions| sub-bin breakdown of bins 18-27 for Solar-J RRTMG>>>Not used when S_=18
+70a71,74
+> H2O   !H2O UV absorpt  ! Pei++ 2019   (2023-01-17 MJP)
+>  300a 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 0.000E+00 xH2O
+>  300b 0.000E+00 0.000E+00 0.000E+00 0.000E+00 2.967E-25 4.392E-25 xH2O
+>  300c 2.675E-25 5.763E-25 3.613E-25 2.662E-25 3.553E-27 0.000E+00 xH2O
+546a551,555
+> 
+> rev 8.0  (3/2023)
+>      added UV H2O absorption from Pei et al. 2019.  H2O is not dissociated
+>      and hence no J-H2O is calculated. No temperature dependence.
+>      many J-values are reduced by ~10% at surface (incl. J-O1D).
